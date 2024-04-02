@@ -57,8 +57,6 @@ async function fulfillDB() {
 
                 console.log(users);
                 console.log(users.length);
-                
-                // Chama a função insert somente após todos os dados serem processados
                 insert(users);
             } catch (error) {
                 console.error("Erro ao analisar JSON:", error);
