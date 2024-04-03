@@ -31,9 +31,9 @@ async function main(){
     const nome = await question('Digite o nome do usuário que deseja buscar: ');
     const password = await question('Digite a senha do usuário que deseja buscar: ');
     const usuario = await getUser(nome, password);
-    if (usuario) {
+    if (usuario.rows.length) {
         usuario.rows.map((row)=>{
-            console.log(`Nome: ${row.name}`);
+            console.log(`\nNome: ${row.name}`);
             console.log(`Email: ${row.email}`);
             console.log(`Gênero: ${row.gender}`);
             console.log(`-------------------------`);
